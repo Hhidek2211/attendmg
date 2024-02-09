@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use DateTime;
 
@@ -19,7 +20,7 @@ class UserSeeder extends Seeder
             'name' => 'てす太郎',
             'email'=> 'test@test.com',
             //'email_verified_at'=> 'test@test.com',
-            'password'=> 'test1234',
+            'password'=> Hash::make('test1234'),
             'ismanager'=> TRUE,
             'manager_id'=> null,
             'created_at'=> new DateTime(),
